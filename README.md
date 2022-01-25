@@ -13,8 +13,11 @@
 
 ## Tidy Data
 
-## Expore Data
+## Explore Data
 
 ## Communicate Insights
+
+## Important Functions
+* head()
 
 ## Important Packages
