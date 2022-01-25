@@ -18,11 +18,16 @@
 ### Videos
 * [Summary Statistics with One Variable](https://www.youtube.com/watch?v=l1lVtEyxnMs&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=8)
 * [Summary Statistics with Two Variables](https://www.youtube.com/watch?v=L5WV8KiD8-A&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=10)
+* [Simple Plots and Graphs](https://www.youtube.com/watch?v=pLh2gdHDUZc&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=11)
 
 ## Communicate Insights
 
 ## Important Functions
 * head()
+* str() - Get a summary of an object's structure.
+* class() - Find the class an object belongs to.
+* getwd() - Find the current working directory.
+* setwd() - Change the current working direcotry.
 * subset()
 * mean() - Average of a variable.
 * sd() - Standard Deviation of a variable.
@@ -43,15 +48,20 @@
 * Import
   * foreign - package that allows for the import of non-R, or "foreign", datasets.  For example, the package can be used to upload a Stata 13 datafile (".dta", via read.dta) or a SAS xport file (".xpt", via read.xport).
   * [haven](https://haven.tidyverse.org/) - Enables R to read and write various data formats ued by other statistical packages (SAS, SPSS, Stata).  Part of the tidyverse.  Output is a tibble.
+  * readr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf))
+  * readxl ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf))
+
+([Cheat Sheet]())
 
 * Tidying Data
-  * tidyr ([Cheat Sheet]())
-  * dplyr ([Cheat Sheet]())
-  * lubridate ([Cheat Sheet]())
+  * tidyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf))
+  * dplyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf))
+  * lubridate ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf))
+  * stringr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf))
 
 * Explore Data
   * stargazer ([]()) - Summary statistics (N, Mean, Std Dev., Min, Max by default) for a data frame.
 
 * Communicate Insights
-  * [ggplot2]() ([Cheat Sheet]())
+  * [ggplot2]() ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf))
 
