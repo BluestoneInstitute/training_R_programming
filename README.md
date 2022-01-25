@@ -19,5 +19,10 @@
 
 ## Important Functions
 * head()
+* subset()
 
 ## Important Packages
+* tidyr
+* dplyr
+* lubridate
+* ggplot2
