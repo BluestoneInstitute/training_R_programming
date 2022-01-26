@@ -1,7 +1,16 @@
 # Training Module:  R Programming
 
+The figure below provides a reasonable visual representation of the data analyst's workflow.  The first step is **Importing** the data into the data analyst's preferred software package.  The second step is **Tidying** the data.  This step is sometimes referred to as "munging" or "wrangling" but they all generally mean the same thing:  preparing the data for analysis.  
+
+Data are rarely, if ever, provided in a form that is analysis ready.  Often, one dataset will need to be combined with multiple other datasets before an analysis can begin.  Moreover, new variables will need to be created or formats will need to be changed prior to performing analyses.  Data may also be missing or wrong.  These all have severe implications for the results of an analysis.  As the old addage goes:  _Garbage In, Garbage Out_.  By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html), data analysts spend between 50% and 80% of their time in the Import and Tidying phases.  The remaining time is spent **Exploring** the data or preparing figures, charts, and tables to **Communicate** insights.  
+
+#### **Data Analyst Workflow**
+
 ![Data](https://d33wubrfki0l68.cloudfront.net/795c039ba2520455d833b4034befc8cf360a70ba/558a5/diagrams/data-science-explore.png)
 
+##### Notes:  Wickham, Hadley, and Garrett Grolemund. R for data science: import, tidy, transform, visualize, and model data. " O'Reilly Media, Inc.", 2016. (available at https://r4ds.had.co.nz/). #####
+
+This training module is organized consistent with the workflow described above.  It emphasizes non-econometric approach to analyzing data since that will form the bulk of the data analyst's work.  It is assumed that you have some familiarity with R and R Studio.  If you do not, please review the Getting Started module for R.
 
 ## Import Data
 
@@ -12,6 +21,16 @@
 ### Exercises
 
 ## Tidy Data
+
+The term "Tidy Data" comes from a [paper by Hadley Wickham](https://vita.had.co.nz/papers/tidy-data.pdf) (author of multiple R packages).  To understand what Tidy data are, it is helpful to understand what Tidy data are not.
+
+### Videos
+* [Missing Data in R (12:51)](https://youtu.be/hLYAno2r9O4)
+
+### Sample Code
+
+### Exercises
+
 
 ## Explore Data
 
