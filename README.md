@@ -16,6 +16,9 @@ The true workflow is not as linear as the figure implies.  Nevertheless, it prov
 * [Importing Data Into R (45:00)](https://www.rstudio.com/resources/webinars/importing-data-into-r/)
   * _Note:_ Focus on the discussion of Tabular Data (0:00 - 12:30).  The rest of the video is optional and covers Hierarchical, Relational, and Distributed data types.  These data types are not as common in economic research as Tabular Data.
 
+### Additional Resources
+* https://lgreski.github.io/dsdepot/2020/06/13/reading-Excel-files.html
+
 ### Sample Code
 ```R
 # Import from Text
@@ -100,6 +103,7 @@ By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-s
   * dplyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf))
   * lubridate ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf))
   * stringr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf))
+  * data.table()
 
 * Explore Data
   * stargazer ([]()) - Summary statistics (N, Mean, Std Dev., Min, Max by default) for a data frame.
