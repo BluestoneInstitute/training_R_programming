@@ -14,7 +14,7 @@ The true workflow is not as linear as the figure implies.  Nevertheless, it prov
 ### Videos
 
 * [Importing Data Into R (45:00)](https://www.rstudio.com/resources/webinars/importing-data-into-r/)
-  * _Note:_ Focus on the discussion of Tabular Data (0:00 - 12:30).  The rest of the video covers Hierarchical, Relational, and Distributed data types.  These data types are not as common in economic research as Tabular Data.
+  * _Note:_ Focus on the discussion of Tabular Data (0:00 - 12:30).  The rest of the video is optional and covers Hierarchical, Relational, and Distributed data types.  These data types are not as common in economic research as Tabular Data.
 
 ### Sample Code
 ```R
