@@ -73,7 +73,7 @@ write_delim(excel, "imported_from_excel.txt", delim = "|")
 ## Tidy Data
 To be useful, data must be structured to facilitate analysis.  Unfortunately, data are rarely, if ever, provided in a form that is analysis ready.  By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html), data analysts spend between 50% and 80% of their time in the Import and Tidying phases.  Often, one dataset will need to be combined with multiple other datasets before an analysis can begin.  Moreover, new variables will need to be created or formats will need to be changed prior to performing analyses.  Data may also be missing or wrong.  These all have severe implications for the results of an analysis.  As the old addage goes --  _Garbage In, Garbage Out_.  
 
-The term "Tidy Data" comes from a [paper by Hadley Wickham](https://vita.had.co.nz/papers/tidy-data.pdf) (author of multiple R packages and creator of the Tidyverse).  He states there are generally four types of transformations needed to convert messy data to Tidy data:
+The term "Tidy Data" comes from a [paper by Hadley Wickham](https://vita.had.co.nz/papers/tidy-data.pdf) (author of multiple R packages and creator of the [Tidyverse](https://www.tidyverse.org/packages/)).  According to Wickham, there are generally four types of transformations needed to convert messy data to Tidy data:
 * Filter:  subsetting or removing observations based on some condition.
 * Transform:  adding or modifying variables
 * Aggregate:  collapsing multiple values into a single value (e.g., by summing or taking means).
