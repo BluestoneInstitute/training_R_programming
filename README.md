@@ -3,11 +3,14 @@
 The figure below provides a reasonable visual representation of the data analyst's workflow.  The first step is **Importing** the data into the data analyst's preferred software package.  The second step is **Tidying** the data.  This step is sometimes referred to as "munging" or "wrangling" but they all generally mean the same thing:  preparing the data for analysis.  The remaining time is spent **Exploring** the data, often through summary statistics, regressions, or more advanced techniques like Machine Learning and Artificial Intelligence.  The final step is to **Communicate** insights through figures, charts, tables, and other visuals.
 
 The true workflow is not as linear as the figure implies.  Nevertheless, it provides a useful framework for how to approach a project and for learning a new software package.  
+
 #### **Data Analyst Workflow**
 
 ![Data](https://d33wubrfki0l68.cloudfront.net/795c039ba2520455d833b4034befc8cf360a70ba/558a5/diagrams/data-science-explore.png)
 
 ##### Notes:  Wickham, Hadley, and Garrett Grolemund. R for data science: import, tidy, transform, visualize, and model data. " O'Reilly Media, Inc.", 2016. (available at https://r4ds.had.co.nz/). #####
+
+Programming often follow the Pareto Principle:  80% of the work can be done by 20% (or less) of the available features.  This module is designed to introduce the fewest number of concepts necessary to be proficient on the vast majority of tasks.
 
 ## Import Data
 There are lots of ways to import data into R.  For example, the base version of R has several data import functions like read.table, read.csv, and read.delim (note the "." after "read").  However, other packages provide slightly better functionality and speed than what is available in base R.  
@@ -76,15 +79,15 @@ The term "Tidy Data" comes from a [paper by Hadley Wickham](https://vita.had.co.
 * Aggregate:  collapsing multiple values into a single value (e.g., by summing or taking means).
 * Sort:  changing the order of observations.
 
-The Tidyverse is a collection of R packages intended to make the task of Tidying simple.  The main packages used are dplyr, stringr, lubridate, and magrittr.  Base R also includes functions for data transformation.  These are typically part of data.table.
+The Tidyverse is a collection of R packages intended to make the task of Tidying simple.  The main packages used are tidyr, dplyr, stringr, lubridate, and magrittr.  Base R also includes functions for data transformation.  These are typically part of data.table.
 
 ### Videos
 
 * [Missing Data in R (12:51)](https://youtu.be/hLYAno2r9O4)
+* tidyr video
 * dplyr video
 * stringr video
 * lubridate video
-* magrittr video
 * data.table video
 
 ### Sample Code
@@ -134,7 +137,6 @@ The Tidyverse is a collection of R packages intended to make the task of Tidying
   * dplyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf))
   * lubridate ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf))
   * stringr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf))
-  * magritter
   * data.table()
 
 * Explore Data
