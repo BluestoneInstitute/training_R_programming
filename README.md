@@ -16,7 +16,8 @@ The readR package includes functions like read_csv, read_tsv, and read_fwf (note
 
 Learn these three packages before branching out into other packages.  
 
-> **BEST PRACTICE NOTE:**  Import data using code saved to a program **NOT** through drop-down menus included in the software.
+> **BEST PRACTICE NOTE:**  
+> Import data using code saved to a program **NOT** through drop-down menus included in the software.
 
 ### Videos
 
@@ -58,9 +59,13 @@ write_rds(excel, "imported_from_excel.rds")
 # Save excel to a csv file
 write_csv(excel, "imported_from_excel.csv")
 
-# Save excelt to a bar delimited txt
+# Save excel to a bar delimited txt
 write_delim(excel, "imported_from_excel.txt", delim = "|")
 ```
+
+> **BEST PRACTICE NOTE:**  
+> Large datasets should be imported once and then saved to a permanent R dataset. This saves you from having to wait to re-import data multiple times.
+
 
 ## Tidy Data
 
@@ -111,12 +116,9 @@ By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-s
 
 ## Important Packages
 * Import
-  * foreign - package that allows for the import of non-R, or "foreign", datasets.  For example, the package can be used to upload a Stata 13 datafile (".dta", via read.dta) or a SAS xport file (".xpt", via read.xport).
-  * [haven](https://haven.tidyverse.org/) - Enables R to read and write various data formats ued by other statistical packages (SAS, SPSS, Stata).  Part of the tidyverse.  Output is a tibble.
   * readr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf))
   * readxl ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf)) This package can read .xlsx files and legacy .xls files.
-
-([Cheat Sheet]())
+  * [haven](https://haven.tidyverse.org/) - Enables R to read and write various data formats ued by other statistical packages (SAS, SPSS, Stata).  Part of the tidyverse.  Output is a tibble.
 
 * Tidying Data
   * tidyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf))
