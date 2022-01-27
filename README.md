@@ -68,15 +68,24 @@ write_delim(excel, "imported_from_excel.txt", delim = "|")
 
 
 ## Tidy Data
+To be useful, data must be structured to facilitate analysis.  Unfortunately, data are rarely, if ever, provided in a form that is analysis ready.  By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html), data analysts spend between 50% and 80% of their time in the Import and Tidying phases.  Often, one dataset will need to be combined with multiple other datasets before an analysis can begin.  Moreover, new variables will need to be created or formats will need to be changed prior to performing analyses.  Data may also be missing or wrong.  These all have severe implications for the results of an analysis.  As the old addage goes --  _Garbage In, Garbage Out_.  
 
-The term "Tidy Data" comes from a [paper by Hadley Wickham](https://vita.had.co.nz/papers/tidy-data.pdf) (author of multiple R packages).  To understand what Tidy data are, it is helpful to understand what Tidy data are not.
+The term "Tidy Data" comes from a [paper by Hadley Wickham](https://vita.had.co.nz/papers/tidy-data.pdf) (author of multiple R packages and creator of the Tidyverse).  He states there are generally four types of transformations needed to convert messy data to Tidy data:
+* Filter:  subsetting or removing observations based on some condition.
+* Transform:  adding or modifying variables
+* Aggregate:  collapsing multiple values into a single value (e.g., by summing or taking means).
+* Sort:  changing the order of observations.
 
-Data are rarely, if ever, provided in a form that is analysis ready.  Often, one dataset will need to be combined with multiple other datasets before an analysis can begin.  Moreover, new variables will need to be created or formats will need to be changed prior to performing analyses.  Data may also be missing or wrong.  These all have severe implications for the results of an analysis.  As the old addage goes:  _Garbage In, Garbage Out_.  
-
-By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html), data analysts spend between 50% and 80% of their time in the Import and Tidying phases.  
+The Tidyverse is a collection of R packages intended to make the task of Tidying simple.  The main packages used are dplyr, stringr, lubridate, and magrittr.  Base R also includes functions for data transformation.  These are typically part of data.table.
 
 ### Videos
+
 * [Missing Data in R (12:51)](https://youtu.be/hLYAno2r9O4)
+* dplyr video
+* stringr video
+* lubridate video
+* magrittr video
+* data.table video
 
 ### Sample Code
 
@@ -120,11 +129,12 @@ By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-s
   * readxl ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf)) This package can read .xlsx files and legacy .xls files.
   * [haven](https://haven.tidyverse.org/) - Enables R to read and write various data formats ued by other statistical packages (SAS, SPSS, Stata).  Part of the tidyverse.  Output is a tibble.
 
-* Tidying Data
+* Tidy Data
   * tidyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf))
   * dplyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf))
   * lubridate ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf))
   * stringr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf))
+  * magritter
   * data.table()
 
 * Explore Data
@@ -133,3 +143,15 @@ By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-s
 * Communicate Insights
   * [ggplot2]() ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf))
 
+To be Added:  
+library(boot)
+library(purrr)
+library(furrr)
+library(zoo)
+library(scales)
+library(modelr)
+library(strucchange)
+library(glue)
+library(RQuantLib)
+library(rvest)
+library(broom)
