@@ -11,36 +11,40 @@ The true workflow is not as linear as the figure implies.  Nevertheless, it prov
 
 ## Import Data
 
+> **BEST PRACTICE NOTE:**  Import data using code saved to a program **NOT** through drop-down menus included in the software.
+
 ### Videos
 
-* [Importing Data Into R (45:00)](https://www.rstudio.com/resources/webinars/importing-data-into-r/)
-  * _Note:_ Focus on the discussion of Tabular Data (0:00 - 12:30).  The rest of the video is optional and covers Hierarchical, Relational, and Distributed data types.  These data types are not as common in economic research as Tabular Data.
+* [Introduction to readR (5:04)](https://www.youtube.com/watch?v=URJNKVBMCAY) - This video provides a very quick and high-level overview of the **readR** package.  It covers Hierarchical data types that are commonly found in social science research.  More detail on the readR package or other data types can be found in the optional videos below.
 
-### Additional Resources
-* https://lgreski.github.io/dsdepot/2020/06/13/reading-Excel-files.html
+  * _(Optional)_ [The readr Package for Importing Delimited Data (25:02)](https://www.youtube.com/watch?v=qxbfVEDfi0o)
+  * _(Optional)_ [Importing Excel Data, SAS Data, and More (14:44)](https://www.youtube.com/watch?v=qxbfVEDfi0o)
+  * _(Optional)_ [Importing Data Into R (45:00)](https://www.rstudio.com/resources/webinars/importing-data-into-r/)
+
+* [Importing/Reading Excel data into R using RStudio (8:11)](https://www.youtube.com/watch?v=JYVWufSQ4OI) - A brief introduction to the **readXL** package.  It begins by introducing how to import data using the drop-down menus in RStudio.  This is a great way to learn the syntax of readXL **however**, it is best practice to save the code into the program you are writing.  That way work can be replicated by others.
+  * _(Optional)_ There are a lot of other packages that can read in Excel files. An overview of these packages and their pros and cons can be found here:  https://lgreski.github.io/dsdepot/2020/06/13/reading-Excel-files.html
 
 ### Sample Code
-```R
-# Import from Text
+```r
+# Import from Text using readR
 library(readr)
 csv <- read_csv("data/Water_Right_Applications.csv")
 
-# Import from Excel
+# Import from Excel using readXL
 library(readxl)
 excel <- read_excel("data/Water_Right_Applications.xlsx")
 
-# Import from SPSS
+# Import from SPSS using haven
 library(haven)
 sav <- read_sav("data/Child_Data.sav")
 
-# Import from SAS
+# Import from SAS using haven
 sas <- read_sas("data/iris.sas7bdat")
 
-# Import from Stata
+# Import from Stata using haven
 stata <- read_dta("data/Milk_Production.dta")
 ```
 
-### Exercises
 
 ## Tidy Data
 
