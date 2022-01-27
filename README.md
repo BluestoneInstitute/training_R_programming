@@ -10,6 +10,11 @@ The true workflow is not as linear as the figure implies.  Nevertheless, it prov
 ##### Notes:  Wickham, Hadley, and Garrett Grolemund. R for data science: import, tidy, transform, visualize, and model data. " O'Reilly Media, Inc.", 2016. (available at https://r4ds.had.co.nz/). #####
 
 ## Import Data
+There are lots of ways to import data into R.  For example, the base version of R has several data import functions like read.table, read.csv, and read.delim (note the "." after "read").  However, other packages provide slightly better functionality and speed than what is available in base R.  
+
+The readR package includes functions like read_csv, read_tsv, and read_fwf (note the "\_" after "read").  The readXL package includes functions like read_excel (again, note the "\_" after "read").  Both readR and readXL are part of the Tidyverse.  The Tidyverse is a collection of R packages that share underlying design philosophy, grammer and datas structures.  Haven is another Tidyverse package that imports datasets from other statistical packages (SAS, Stata, and SPSS) into R.
+
+Learn these three packages before branching out into other packages.  
 
 > **BEST PRACTICE NOTE:**  Import data using code saved to a program **NOT** through drop-down menus included in the software.
 
@@ -44,7 +49,18 @@ sas <- read_sas("data/iris.sas7bdat")
 # Import from Stata using haven
 stata <- read_dta("data/Milk_Production.dta")
 ```
+readR can also save .Rda files to different formats.  This is done via the functions write_csv, write_delim, and write_rds.
 
+```r
+# Save excel to an R dataset
+write_rds(excel, "imported_from_excel.rds")
+
+# Save excel to a csv file
+write_csv(excel, "imported_from_excel.csv")
+
+# Save excelt to a bar delimited txt
+write_delim(excel, "imported_from_excel.txt", delim = "|")
+```
 
 ## Tidy Data
 
