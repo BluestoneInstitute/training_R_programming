@@ -144,6 +144,7 @@ The Tidyverse is a collection of R packages intended to make the task of Tidying
 
 * Communicate Insights
   * [ggplot2]() ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf))
+  * [plotly]()
 
 To be Added:  
 library(boot)
