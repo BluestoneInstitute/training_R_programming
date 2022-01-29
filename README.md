@@ -53,7 +53,10 @@ sas <- read_sas("data/iris.sas7bdat")
 # Import from Stata using haven
 stata <- read_dta("data/Milk_Production.dta")
 ```
-readR can also save .Rda files to different formats.  This is done via the functions write_csv, write_delim, and write_rds.
+readR can also save objects to different formats.  This is done via the functions write_csv, write_delim, and write_rds.
+
+> **BEST PRACTICE NOTE:**  
+> .RData (sometimes abbreviated as .Rda) is a valid data type.  .RData files can store multiple objects under the same name.  It is preferred to use .Rds rather than .Rda.
 
 ```r
 # Save excel to an R dataset
