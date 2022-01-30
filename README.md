@@ -87,7 +87,18 @@ The Tidyverse is a collection of R packages intended to make the task of Tidying
 ### Videos
 
 * [Missing Data in R (12:51)](https://youtu.be/hLYAno2r9O4)
-* tidyr video
+
+* Tidyr Package
+  * [Reshaping Data with tidyr (19:10)](https://www.youtube.com/watch?v=JKM4Xu7FAF8) - This video focuses on the functions **pivot_longer()**, **pivot_wider()**, **unite()**, and  **separate()**  pivot_longer() and pivot_wider are used to transpose data.  Previous versions of Tidyr used the functions gather() and spread() to transpose data.  You may run across gather() and spread() functions online even though they have been replaced.
+* Dplyr Package
+  * [Join Data with dplyr (9:07)](https://www.youtube.com/watch?v=Yg-pNqzDuN4) - Joining datasets is another aspect of the dplyr package.  A Venn diagram may be more intuitive than the tables used in the video (conceptually the diagram and tabular represenations are the same):
+<p align="center">
+  <img src="https://tavareshugo.github.io/r-intro-tidyverse-gapminder/fig/07-dplyr_joins.svg" alt="Venn Diagram of Joins" width = "300" height="auto">
+</p>
+
+##### Notes:  Introduction to R/tidyverse for Exploratory Data Analysis. available at https://tavareshugo.github.io/r-intro-tidyverse-gapminder/index.html. #####
+
+
 * dplyr video
 * stringr video
 * lubridate video
