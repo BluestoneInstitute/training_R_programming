@@ -73,7 +73,7 @@ write_delim(excel, "imported_from_excel.txt", delim = "|")
 ```
 
 > **BEST PRACTICE NOTE:**  
-> Large datasets should be imported once and then saved to a permanent R dataset. This saves you from having to wait to re-import data multiple times.
+> Most datasets should be imported once and then saved to a permanent dataset. This saves you from having to re-import data multiple times.
 
 
 ## Tidy Data
@@ -86,6 +86,8 @@ Data must be structured to facilitate analysis to be useful.  Unfortunately, dat
 The Tidyverse is a collection of R packages intended to make the task of Tidying simple.  The main packages used are **tidyr**, **dplyr**, **stringr**, **lubridate**, and **magrittr**.  Included below are a collection of short videos that introduce the tidyr and dplyr packages.  As an optional alternative, a 3 hour video workshop [(Data Wrangling with R and the Tidyverse)](https://www.youtube.com/watch?v=CnY5Y5ANnjE&t=3416s) on the tidyverse is also available.
 
 Cheatsheets for [tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf), [dplyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf), [stringr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf), and [lubridate](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf) can be used as a quick reference.
+
+* _Optional_ [](https://bobaekang.github.io/icjia-r-workshop/modules.html)
 
 * data.table()
 
@@ -122,7 +124,38 @@ Base R also includes functions for data transformation.  These are typically par
 
 ## Communicate Insights
 
-* [ggplot2]() ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf))
+### ggplot2 ###
+Figures and tables generated in R are tyipcally better than most other statistical packages (Stata and SAS, for example).  The main packages for generating figures is **ggplot2**.  The options available for ggplot2 are so vast that multiple books have been written on the subject (See online versions written by [Hadley Wickham](https://ggplot2-book.org/index.html) or [Winston Chang](https://r-graphics.org/)).
+
+Before reviewing code, it is helpful to be familiar with the "grammar of graphics" concept on which ggplot2 is based.  A grammar of graphics is intended to define a set of rules that help to define and establish components of a language.  The key ideas behind the grammar of graphics is:
+* Graphics are built from layers of grammatical elements
+* Variables are mapped onto asthetics
+* Seven *Layers* in total (Data, Aesthetics (Scales), Geometries, Facets, Statistical transformations, Coordinate Systems, and Themes)
+* Every plot must include the first three layers:
+  * Data:  The dataset being plotted
+  * Aesthetics:  Scales onto which we map our data (characteristics like x-axis, y-axis, color, fill, size, etc.)
+  * Geometries:  Visual elements used for our data (essentially points for scatterplots, bars for barchart, lines for line graph, etc.)
+
+This means a figure is comprised of multiple layers and that each layer is comprised of multiple options.  By specifiying the characteristics of each layer you can assemble a figure:
+<p align="center">
+ <img src=http://r.qcbs.ca/workshop03/book-en/images/Layers_ggplot.png alt="Example of Layers Creating a Figure" width = "700" height="auto">
+</p>
+
+##### Notes:  "Quebec Centre for Biodiversity Science" (available at http://r.qcbs.ca/workshop03/book-en/). #####
+
+
+
+
+
+
+[ggplot2]() ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf))
+
+* _Optional_ ["A Comprehensive Guide to the Grammar of Graphics for Effective Visualization of Multi-Dimensional Data"](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
+* _Optional_ ["R Workshop: Module 4 (1)"](https://bobaekang.github.io/icjia-r-workshop/notes/module4_notes1.html)
+
+### beamer ###
+
+
 
 ## Important Functions
 * head()
