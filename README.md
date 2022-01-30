@@ -13,14 +13,14 @@ The true workflow is not as linear as the figure implies.  Nevertheless, it prov
 Programming often follow the Pareto Principle:  80% of the work can be done by 20% (or less) of the available features.  This module is designed to introduce the fewest number of concepts necessary to be proficient on the vast majority of tasks.
 
 ## Import Data
-There are lots of ways to import data into R.  For example, the base version of R has several data import functions like read.table, read.csv, and read.delim (note the "." after "read").  However, other packages provide slightly better functionality and speed than what is available in base R.  
+There are lots of ways to import data into R.  For example, the base version of R has several data import functions like **read.table**, **read.csv**, and **read.delim** (note the "." after "read").  However, other packages provide slightly better functionality and speed than what is available in base R.  
 
-The readR package includes functions like read_csv, read_tsv, and read_fwf (note the "\_" after "read").  The readXL package includes functions like read_excel (again, note the "\_" after "read").  Both readR and readXL are part of the Tidyverse.  The Tidyverse is a collection of R packages that share underlying design philosophy, grammer and datas structures.  Haven is another Tidyverse package that imports datasets from other statistical packages (SAS, Stata, and SPSS) into R.
-
-Learn these three packages before branching out into other packages.  
+The **readR** package includes functions like **read_csv**, **read_tsv**, and **read_fwf** (note the "\_" after "read").  The **readXL** package includes functions like **read_excel** (again, note the "\_" after "read").  Both readR and readXL are part of the Tidyverse.  The Tidyverse is a collection of R packages that share underlying design philosophy, grammer and datas structures.  **haven** is another Tidyverse package that imports datasets from other statistical packages (SAS, Stata, and SPSS) into R.
 
 > **BEST PRACTICE NOTE:**  
-> Import data using code saved to a program **NOT** through drop-down menus included in the software.
+> Learn the packages readR, readXL, and haven before branching out into other data import packages.  
+
+Cheat sheets for [readr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf), [readXL](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf), and [haven](https://haven.tidyverse.org/) are available.
 
 ### Videos
 
@@ -30,8 +30,11 @@ Learn these three packages before branching out into other packages.
   * _(Optional)_ [Importing Excel Data, SAS Data, and More (14:44)](https://www.youtube.com/watch?v=qxbfVEDfi0o)
   * _(Optional)_ [Importing Data Into R (45:00)](https://www.rstudio.com/resources/webinars/importing-data-into-r/)
 
+> **BEST PRACTICE NOTE:**  
+> Import data using code saved to a program **NOT** through drop-down menus included in the software.
+
 * [Importing/Reading Excel data into R using RStudio (8:11)](https://www.youtube.com/watch?v=JYVWufSQ4OI) - A brief introduction to the **readXL** package.  It begins by introducing how to import data using the drop-down menus in RStudio.  This is a great way to learn the syntax of readXL **however**, it is best practice to save the code into the program you are writing.  That way work can be replicated by others.
-  * _(Optional)_ There are a lot of other packages that can read in Excel files. An overview of these packages and their pros and cons can be found here:  https://lgreski.github.io/dsdepot/2020/06/13/reading-Excel-files.html
+  * _(Optional)_ There are a lot of other packages that can read in Excel files. An overview of these packages and their pros and cons can be found here:  https://lgreski.github.io/dsdepot/2020/06/13/reading-Excel-files.html.
 
 ### Sample Code
 ```r
@@ -74,23 +77,27 @@ write_delim(excel, "imported_from_excel.txt", delim = "|")
 
 
 ## Tidy Data
-To be useful, data must be structured to facilitate analysis.  Unfortunately, data are rarely, if ever, provided in a form that is analysis ready.  By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html), data analysts spend between 50% and 80% of their time in the Import and Tidying phases.  Often, one dataset will need to be combined with multiple other datasets before an analysis can begin.  Moreover, new variables will need to be created or formats will need to be changed prior to performing analyses.  Data may also be missing or wrong.  These all have severe implications for the results of an analysis.  As the old addage goes --  _Garbage In, Garbage Out_.  
-
-The term "Tidy Data" comes from a [paper by Hadley Wickham](https://vita.had.co.nz/papers/tidy-data.pdf) (author of multiple R packages and creator of the [Tidyverse](https://www.tidyverse.org/packages/)).  According to Wickham, there are generally four types of transformations needed to convert messy data to Tidy data:
+Data must be structured to facilitate analysis to be useful.  Unfortunately, data are rarely, if ever, provided in a form that is analysis ready.  By [some estimates](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html), data analysts spend between 50% and 80% of their time in the Import and Tidying phases.  The term "Tidy Data" comes from a [paper by Hadley Wickham](https://vita.had.co.nz/papers/tidy-data.pdf) (author of multiple R packages and creator of the [Tidyverse](https://www.tidyverse.org/packages/)).  According to Wickham, there are generally four types of transformations needed to convert messy data to Tidy data:
 * Filter:  subsetting or removing observations based on some condition.
 * Transform:  adding or modifying variables
 * Aggregate:  collapsing multiple values into a single value (e.g., by summing or taking means).
 * Sort:  changing the order of observations.
 
-The Tidyverse is a collection of R packages intended to make the task of Tidying simple.  The main packages used are tidyr, dplyr, stringr, lubridate, and magrittr.  Base R also includes functions for data transformation.  These are typically part of data.table.
+The Tidyverse is a collection of R packages intended to make the task of Tidying simple.  The main packages used are **tidyr**, **dplyr**, **stringr**, **lubridate**, and **magrittr**.  Included below are a collection of short videos that introduce the tidyr and dplyr packages.  As an optional alternative, a 3 hour video workshop [(Data Wrangling with R and the Tidyverse)](https://www.youtube.com/watch?v=CnY5Y5ANnjE&t=3416s) on the tidyverse is also available.
+
+Cheatsheets for [tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf), [dplyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf), [stringr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf), and [lubridate](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf) can be used as a quick reference.
+
+* data.table()
+
+Base R also includes functions for data transformation.  These are typically part of data.table.
 
 ### Videos
 
 * [Missing Data in R (12:51)](https://youtu.be/hLYAno2r9O4)
 
-* Tidyr Package
+* **tidyr** Package
   * [Reshaping Data with tidyr (19:10)](https://www.youtube.com/watch?v=JKM4Xu7FAF8) - This video focuses on the functions **pivot_longer()**, **pivot_wider()**, **unite()**, and  **separate()**  pivot_longer() and pivot_wider are used to transpose data.  Previous versions of Tidyr used the functions gather() and spread() to transpose data.  You may run across gather() and spread() functions online even though they have been replaced.
-* Dplyr Package
+* **dplyr** Package
   * [Join Data with dplyr (9:07)](https://www.youtube.com/watch?v=Yg-pNqzDuN4) - Joining datasets is another aspect of the dplyr package.  A Venn diagram may be more intuitive than the tables used in the video (conceptually the diagram and tabular represenations are the same):
 <p align="center">
   <img src="https://tavareshugo.github.io/r-intro-tidyverse-gapminder/fig/07-dplyr_joins.svg" alt="Venn Diagram of Joins" width = "300" height="auto">
@@ -98,16 +105,11 @@ The Tidyverse is a collection of R packages intended to make the task of Tidying
 
 ##### Notes:  Introduction to R/tidyverse for Exploratory Data Analysis. available at https://tavareshugo.github.io/r-intro-tidyverse-gapminder/index.html. #####
 
-
-* dplyr video
-* stringr video
-* lubridate video
-* data.table video
+  * [dplyr (9:11)](https://www.youtube.com/watch?v=bUM3wX4YZDc) - Focuses on the functions **mutate()**, **filter()**, **select()**, **arrange()**, and **rename()** functions in dplyr.
+  * [Piping in dplyr (6:50)](https://www.youtube.com/watch?v=e_SQnJpS5fA) - Introduces the pipe operator (**%>%**) used in the tidyverse.  The pipe operator chains together multiple operations at once.
+  * [Grouping in dplyr (9:48)](https://www.youtube.com/watch?v=zEhlgY2l3gE) - Covers the **group_by()** function in dplyr.
 
 ### Sample Code
-
-### Exercises
-
 
 ## Explore Data
 
@@ -116,7 +118,11 @@ The Tidyverse is a collection of R packages intended to make the task of Tidying
 * [Summary Statistics with Two Variables](https://www.youtube.com/watch?v=L5WV8KiD8-A&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=10)
 * [Simple Plots and Graphs](https://www.youtube.com/watch?v=pLh2gdHDUZc&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=11)
 
+* stargazer ([]()) - Summary statistics (N, Mean, Std Dev., Min, Max by default) for a data frame.
+
 ## Communicate Insights
+
+* [ggplot2]() ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf))
 
 ## Important Functions
 * head()
@@ -141,34 +147,15 @@ The Tidyverse is a collection of R packages intended to make the task of Tidying
 * barplot() - A simple (unformatted) bar chart.
 
 ## Important Packages
-* Import
-  * readr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf))
-  * readxl ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf)) This package can read .xlsx files and legacy .xls files.
-  * [haven](https://haven.tidyverse.org/) - Enables R to read and write various data formats ued by other statistical packages (SAS, SPSS, Stata).  Part of the tidyverse.  Output is a tibble.
-
-* Tidy Data
-  * tidyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf))
-  * dplyr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf))
-  * lubridate ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf))
-  * stringr ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf))
-  * data.table()
-
-* Explore Data
-  * stargazer ([]()) - Summary statistics (N, Mean, Std Dev., Min, Max by default) for a data frame.
-
-* Communicate Insights
-  * [ggplot2]() ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf))
-  * [plotly]()
-
-To be Added:  
-library(boot)
-library(purrr)
-library(furrr)
-library(zoo)
-library(scales)
-library(modelr)
-library(strucchange)
-library(glue)
-library(RQuantLib)
-library(rvest)
-library(broom)
+One you have mastered the packages mentioned above you are ready to branch out.  Some other packages that might be useful are:
+* boot - 
+* purrr - 
+* furrr - 
+* zoo - 
+* scales - 
+* modelr - 
+* strucchange - 
+* glue - 
+* RQuantLib - 
+* rvest - 
+* broom - 
