@@ -83,15 +83,12 @@ Data must be structured to facilitate analysis to be useful.  Unfortunately, dat
 * Aggregate:  collapsing multiple values into a single value (e.g., by summing or taking means).
 * Sort:  changing the order of observations.
 
-The Tidyverse is a collection of R packages intended to make the task of Tidying simple.  The main packages used are **tidyr**, **dplyr**, **stringr**, **lubridate**, and **magrittr**.  Included below are a collection of short videos that introduce the tidyr and dplyr packages.  As an optional alternative, a 3 hour video workshop [(Data Wrangling with R and the Tidyverse)](https://www.youtube.com/watch?v=CnY5Y5ANnjE&t=3416s) on the tidyverse is also available.
+The Tidyverse is a collection of R packages intended to make the task of Tidying simple.  The main packages used are **tidyr**, **dplyr**, **stringr**, **lubridate**, and **magrittr**.  Included below are a collection of short videos that introduce the tidyr and dplyr packages.  
 
 Cheatsheets for [tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf), [dplyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf), [stringr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf), and [lubridate](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf) can be used as a quick reference.
 
-* _Optional_ [](https://bobaekang.github.io/icjia-r-workshop/modules.html)
-
-* data.table()
-
-Base R also includes functions for data transformation.  These are typically part of data.table.
+* _Optional_ [Materials from an R workshop covering tidyr and dplyr](https://bobaekang.github.io/icjia-r-workshop/modules.html)
+* _Optional_ [Data Wrangling with R and the Tidyverse (2:56:24)](https://www.youtube.com/watch?v=CnY5Y5ANnjE&t=3416s) on the tidyverse is also available.
 
 ### Videos
 
@@ -113,19 +110,31 @@ Base R also includes functions for data transformation.  These are typically par
 
 ### Sample Code
 
+```r
+# Forthcoming
+```
+
 ## Explore Data
+
+**stargazer** is a package commonly used by academics to generate tables used in their research.  The popularity is because most **style** options are typically designed to resemble academic journals.  While mostly geared to regression output, stargazer's features are also useful for summary tables.  stargazer includes more summary statistics by default (N, Mean, Std. Dev., Min, Max) than does Base R's table() function.
+
+* _Optional_ Unlike other packages, [stargazer's vignette](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf) is readable and intuitive.
 
 ### Videos
 * [Summary Statistics with One Variable](https://www.youtube.com/watch?v=l1lVtEyxnMs&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=8)
 * [Summary Statistics with Two Variables](https://www.youtube.com/watch?v=L5WV8KiD8-A&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=10)
 * [Simple Plots and Graphs](https://www.youtube.com/watch?v=pLh2gdHDUZc&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=11)
 
-* stargazer ([]()) - Summary statistics (N, Mean, Std Dev., Min, Max by default) for a data frame.
+### Sample Code
+
+
+```r
+# Forthcoming
+```
 
 ## Communicate Insights
 
-### ggplot2 ###
-Figures and tables generated in R are tyipcally better than most other statistical packages (Stata and SAS, for example).  The main packages for generating figures is **ggplot2**.  The options available for ggplot2 are so vast that multiple books have been written on the subject (See online versions written by [Hadley Wickham](https://ggplot2-book.org/index.html) or [Winston Chang](https://r-graphics.org/)).
+Figures generated in R are typically better than most other statistical packages (Stata and SAS, for example).  The main package for generating figures is **ggplot2** [(Cheat Sheet)](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf).  The options available for ggplot2 are so vast that multiple books have been written on the subject (See online versions written by [Hadley Wickham](https://ggplot2-book.org/index.html) or [Winston Chang](https://r-graphics.org/)).
 
 Before reviewing code, it is helpful to be familiar with the "grammar of graphics" concept on which ggplot2 is based.  A grammar of graphics is intended to define a set of rules that help to define and establish components of a language.  The key ideas behind the grammar of graphics is:
 * Graphics are built from layers of grammatical elements
@@ -136,27 +145,31 @@ Before reviewing code, it is helpful to be familiar with the "grammar of graphic
   * Aesthetics:  Scales onto which we map our data (characteristics like x-axis, y-axis, color, fill, size, etc.)
   * Geometries:  Visual elements used for our data (essentially points for scatterplots, bars for barchart, lines for line graph, etc.)
 
-This means a figure is comprised of multiple layers and that each layer is comprised of multiple options.  By specifiying the characteristics of each layer you can assemble a figure:
+This means a figure is comprised of multiple layers and that each layer is comprised of multiple options.  By specifiying the details of each layer you can assemble a figure, for example:
 <p align="center">
  <img src=http://r.qcbs.ca/workshop03/book-en/images/Layers_ggplot.png alt="Example of Layers Creating a Figure" width = "700" height="auto">
 </p>
 
 ##### Notes:  "Quebec Centre for Biodiversity Science" (available at http://r.qcbs.ca/workshop03/book-en/). #####
 
+### Videos
+* [Intro to ggplot2 (10:47)](https://www.youtube.com/watch?v=XPaB-gj-7Ts) - This video covers the grammar of graphics and then combines those concepts with code that generates some basic figures.
+* [ggplot (5:58)](https://www.youtube.com/watch?v=SWJh_rt25mo) - Another introduction to the ggplot function but without the detail on grammar of graphics.
+* [ggplot Geometries (10:14)](https://www.youtube.com/watch?v=4djbRljsoyk) - Introduction to the geometries layer 
+* [Overlaid and Grouped ggplots (10:39)](https://www.youtube.com/watch?v=Wxq1ln92v5g) - Horizontal lines, vertical lines, and other attributes commonly used in social science research.
+* [ggplot Titles and Labels (6:55)](https://www.youtube.com/watch?v=yW9fswgGDBE) - Adding in **ggtitle**, **xlab**, **ylab**, and other parts to a simple ggplot figure.
 
-
-
-
-
-[ggplot2]() ([Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf))
+> **BEST PRACTICE NOTE:**  
+> The "grammar of graphics" concept is also useful for creating footnotes that help the reader to understand a figure.  For example, a figure's footnote should include the source data and any filters applied (Data Layer) and identify any calculations done on those data (Statistical Transformation Layer).
 
 * _Optional_ ["A Comprehensive Guide to the Grammar of Graphics for Effective Visualization of Multi-Dimensional Data"](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
 * _Optional_ ["R Workshop: Module 4 (1)"](https://bobaekang.github.io/icjia-r-workshop/notes/module4_notes1.html)
 
-### beamer ###
+### Sample Code
 
-
-
+```r
+# Forthcoming
+```
 ## Important Functions
 * head()
 * str() - Get a summary of an object's structure.
@@ -192,3 +205,10 @@ One you have mastered the packages mentioned above you are ready to branch out. 
 * RQuantLib - 
 * rvest - 
 * broom - 
+* gt - "Grammar of Tables" equivalen to the "Grammar of Graphics"
+* beamer
+
+
+* data.table()
+
+Base R also includes functions for data transformation.  These are typically part of data.table.
