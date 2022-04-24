@@ -10,7 +10,7 @@ The true workflow is not as linear as the figure implies.  Nevertheless, it prov
 
 ##### Notes:  Wickham, Hadley, and Garrett Grolemund. R for data science: import, tidy, transform, visualize, and model data. " O'Reilly Media, Inc.", 2016. (available at https://r4ds.had.co.nz/). #####
 
-Programming often follow the Pareto Principle:  80% of the work can be done by 20% (or less) of the available features.  This module is designed to introduce the fewest number of concepts necessary to be proficient on the vast majority of tasks.
+Programming often follows the Pareto Principle:  80% of the work can be done by 20% (or less) of the available features.  This module is designed to introduce the fewest number of concepts necessary to be proficient on the vast majority of tasks.
 
 ## Import Data
 There are lots of ways to import data into R.  For example, the base version of R has several data import functions like **read.table**, **read.csv**, and **read.delim** (note the "." after "read").  However, other packages provide slightly better functionality and speed than what is available in base R.  
@@ -101,6 +101,7 @@ Cheatsheets for [tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/ma
 <p align="center">
   <img src="https://tavareshugo.github.io/r-intro-tidyverse-gapminder/fig/07-dplyr_joins.svg" alt="Venn Diagram of Joins" width = "300" height="auto">
 </p>
+* Mastering 6 dplyr verbs should allow you to accomplish most tasks:  filter, mutate, group, summarize, and join.
 
 ##### Notes:  Introduction to R/tidyverse for Exploratory Data Analysis. available at https://tavareshugo.github.io/r-intro-tidyverse-gapminder/index.html. #####
 
@@ -159,8 +160,12 @@ This means a figure is comprised of multiple layers and that each layer is compr
 * [Overlaid and Grouped ggplots (10:39)](https://www.youtube.com/watch?v=Wxq1ln92v5g) - Horizontal lines, vertical lines, and other attributes commonly used in social science research.
 * [ggplot Titles and Labels (6:55)](https://www.youtube.com/watch?v=yW9fswgGDBE) - Adding in **ggtitle**, **xlab**, **ylab**, and other parts to a simple ggplot figure.
 
-> **BEST PRACTICE NOTE:**  
-> The "grammar of graphics" concept is also useful for creating footnotes that help the reader to understand a figure.  For example, a figure's footnote should include the source data and any filters applied (Data Layer) and identify any calculations done on those data (Statistical Transformation Layer).
+
+**BEST PRACTICE NOTE:**  
+The "grammar of graphics" concept is also useful for creating footnotes that help the reader to understand a figure.  For example, a figure's footnote should include the source data and any filters applied (Data Layer) and identify any calculations done on those data (Statistical Transformation Layer).
+
+**BEST PRACTICE NOTE:**  
+Frequently you will want to see a side-by-side comparision of graphs, [like this one](https://community.rstudio.com/uploads/default/original/3X/8/f/8fcfe3fef075847058e9de576a2dd0e3a2bdefa1.png).  This can be accomplished using facet_wrap() function in **ggplot2**.
 
 * _Optional_ ["A Comprehensive Guide to the Grammar of Graphics for Effective Visualization of Multi-Dimensional Data"](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
 * _Optional_ ["R Workshop: Module 4 (1)"](https://bobaekang.github.io/icjia-r-workshop/notes/module4_notes1.html)
@@ -170,13 +175,13 @@ This means a figure is comprised of multiple layers and that each layer is compr
 ```r
 # Forthcoming
 ```
-## Important Functions
-* head()
+## Important Functions (Optional)
+* head() - Returns the first or last parts of a vector, matrix, table, data frame or function.  The opposite of tail().
 * str() - Get a summary of an object's structure.
 * class() - Find the class an object belongs to.
 * getwd() - Find the current working directory.
 * setwd() - Change the current working direcotry.
-* subset()
+* subset() - An easy way to select variables and observations without using the Tidyverse
 * mean() - Average of a variable.
 * sd() - Standard Deviation of a variable.
 * median() - Median of a variable.
@@ -184,31 +189,20 @@ This means a figure is comprised of multiple layers and that each layer is compr
 * table() - Listing of all the values contained in a variable.  Often useful for categorical variables (for example, years of education).  When used with multiple variables it will yield a cross-tab.  To add labels to the cross-tab, use "dnn=c()" option.
 * cor() - Calculates a correlation between two variables.  Alt version can be done with cor.test().  The alternative will yield statistical tests.
 * aggregate() - Calculates summary statistics by group [[Tutorial](https://www.datasciencemadesimple.com/aggregate-function-in-r/)]
-* sapply() -
-* lapply() -
-* mapply() -
-* tapply() -
 * plot() - A simple (unformatted) scatterplot of data.  Can also be used to plot a density plot ("plot(density(dataset$variablename))").
 * hist() - A simple (unformatted) histogram of data.
 * barplot() - A simple (unformatted) bar chart.
 
-## Important Packages
+## Important Packages (Optional)
 One you have mastered the packages mentioned above you are ready to branch out.  Some other packages that might be useful are:
-* boot - 
-* purrr - 
-* furrr - 
-* zoo - 
-* scales - 
-* modelr - 
-* strucchange - 
-* glue - 
-* RQuantLib - 
-* rvest - 
-* broom - 
-* gt - "Grammar of Tables" equivalen to the "Grammar of Graphics"
-* beamer
-
-
+* [boot](https://cran.r-project.org/web/packages/boot/boot.pdf)
+* [purrr](https://purrr.tidyverse.org/)
+* [furrr](https://furrr.futureverse.org/)
+* [zoo](https://cran.r-project.org/web/packages/zoo/zoo.pdf)
+* [scales](https://cran.r-project.org/web/packages/scales/scales.pdf)
+* [modelr](https://www.tidymodels.org/)
+* [RQuantLib](https://cran.r-project.org/web/packages/RQuantLib/RQuantLib.pdf)
+* [rvest](https://cran.r-project.org/web/packages/rvest/rvest.pdf)
+* [broom](https://cran.r-project.org/web/packages/broom/broom.pdf)
+* [gt](https://cran.r-project.org/web/packages/gt/gt.pdf)
 * data.table()
-
-Base R also includes functions for data transformation.  These are typically part of data.table.
