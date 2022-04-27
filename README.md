@@ -175,15 +175,28 @@ Frequently you will want to see a side-by-side comparision of graphs, [like this
 ```r
 # Forthcoming
 ```
-At first, it may be easier to export raw data into excel for formatting there.  It may also be easier if you are working with people that do not know R.  Fortunately, the **xlsx** package exists for this purpose.  This package is pretty straightforward to use and also more advance features that may allow for greater control over what, where, and how your data are exported.
+Sometimes it is easier to export raw data into excel for formatting there.  This may be true if it is a one-off analysis and the time to format the output in R would be greater than the time to format in Excel.  It may also be easier if you are working with people that do not know R.  Fortunately, the **openxlsx** package exists for this purpose.  It is straightforward to use for the purposes of exporting raw data.  That said, the package is capable of much more than just exporting data.  As your knowledge of R expands you may want to learn some of these other features.
 
 ### Sample Code
 ```r
-install.packages("xlsx") 
-library(xlsx)
+install.packages("openxlsx") 
+library(openxlsx)
 
-write.xlsx(df, file = "output.xlsx", sheetName = "Data Frame")
+#Write a single worksheet to a single excel file
+write.xlsx(df, file = "output.xlsx", sheetName = "Data Frame", asTAble = FALSE)
+
+#Write multiple worksheets to the same file
+
+#create a list of 'worksheet' names and dataframes
+dataset_names <- list('df1' = df1, 'df2' = df2
+                      , 'df3' = df3, 'df4' = df4)
+#export all dataframes                   
+write.xlsx(dataset_names, file = 'output.xlsx', asTable = TRUE)
 ```
+> **BEST PRACTICE NOTE:**  
+> It is best to ignore people who claim "you should never use" another tool like Excel.  These people often prefer a single tool (e.g., R, Python, etc.) to do all jobs and don't often work on teams with a diverse skillset.  As the saying goes, "When all you have is a hammer...."  That said, when moving across tools you do break the chain between raw data and final tables.  Be very cautious about that as it could lead to a replicatability problem.  
+> 
+> Use the right tool for the right job but be mindful of the costs and benefits to time, replicatability, checking efficiency, risk of data corruption, learning new skills, etc.
 
 ## Important Functions (Optional)
 * head() - Returns the first or last parts of a vector, matrix, table, data frame or function.  The opposite of tail().
