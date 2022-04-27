@@ -205,4 +205,5 @@ One you have mastered the packages mentioned above you are ready to branch out. 
 * [rvest](https://cran.r-project.org/web/packages/rvest/rvest.pdf)
 * [broom](https://cran.r-project.org/web/packages/broom/broom.pdf)
 * [gt](https://cran.r-project.org/web/packages/gt/gt.pdf)
+* [here](https://cran.r-project.org/web/packages/here/here.pdf) and a good rant about the benefits of here [here](https://malco.io/2018/11/05/why-should-i-use-the-here-package-when-i-m-already-using-projects/)
 * data.table()
