@@ -175,6 +175,16 @@ Frequently you will want to see a side-by-side comparision of graphs, [like this
 ```r
 # Forthcoming
 ```
+At first, it may be easier to export raw data into excel for formatting there.  It may also be easier if you are working with people that do not know R.  Fortunately, the **xlsx** package exists for this purpose.  This package is pretty straightforward to use and also more advance features that may allow for greater control over what, where, and how your data are exported.
+
+### Sample Code
+```r
+install.packages("xlsx") 
+library(xlsx)
+
+write.xlsx(df, file = "output.xlsx", sheetName = "Data Frame")
+```
+
 ## Important Functions (Optional)
 * head() - Returns the first or last parts of a vector, matrix, table, data frame or function.  The opposite of tail().
 * str() - Get a summary of an object's structure.
