@@ -121,6 +121,9 @@ Cheatsheets for [tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/ma
 
 * _Optional_ Unlike other packages, [stargazer's vignette](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf) is readable and intuitive.
 
+>**BEST PRACTICE NOTE:**  
+>Another benefit to stargazer is that it can format output tables to match the Chicago Manual of Style which is Bluestone Institute's default style.  Use the 'qje' style.
+
 ### Videos
 * [Summary Statistics with One Variable](https://www.youtube.com/watch?v=l1lVtEyxnMs&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=8)
 * [Summary Statistics with Two Variables](https://www.youtube.com/watch?v=L5WV8KiD8-A&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=10)
@@ -161,11 +164,11 @@ This means a figure is comprised of multiple layers and that each layer is compr
 * [ggplot Titles and Labels (6:55)](https://www.youtube.com/watch?v=yW9fswgGDBE) - Adding in **ggtitle**, **xlab**, **ylab**, and other parts to a simple ggplot figure.
 
 
-**BEST PRACTICE NOTE:**  
-The "grammar of graphics" concept is also useful for creating footnotes that help the reader to understand a figure.  For example, a figure's footnote should include the source data and any filters applied (Data Layer) and identify any calculations done on those data (Statistical Transformation Layer).
+>**BEST PRACTICE NOTE:**  
+>The "grammar of graphics" concept is also useful for creating footnotes that help the reader to understand a figure.  For example, a figure's footnote should include > the source data and any filters applied (Data Layer) and identify any calculations done on those data (Statistical Transformation Layer).
 
-**BEST PRACTICE NOTE:**  
-Frequently you will want to see a side-by-side comparision of graphs, [like this one](https://community.rstudio.com/uploads/default/original/3X/8/f/8fcfe3fef075847058e9de576a2dd0e3a2bdefa1.png).  This can be accomplished using facet_wrap() function in **ggplot2**.
+> **BEST PRACTICE NOTE:**  
+> Frequently you will want to see a side-by-side comparision of graphs, [like this one] (https://community.rstudio.com/uploads/default/original/3X/8/f/8fcfe3fef075847058e9de576a2dd0e3a2bdefa1.png).  This can be accomplished using facet_wrap() function in **ggplot2**.
 
 * _Optional_ ["A Comprehensive Guide to the Grammar of Graphics for Effective Visualization of Multi-Dimensional Data"](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
 * _Optional_ ["R Workshop: Module 4 (1)"](https://bobaekang.github.io/icjia-r-workshop/notes/module4_notes1.html)
@@ -194,9 +197,9 @@ dataset_names <- list('df1' = df1, 'df2' = df2
 write.xlsx(dataset_names, file = 'output.xlsx', asTable = TRUE)
 ```
 > **BEST PRACTICE NOTE:**  
-> It is best to ignore people who claim "you should never use" another tool like Excel.  These people often prefer a single tool (e.g., R, Python, etc.) to do all jobs and don't often work on teams with a diverse skillset.  As the saying goes, "When all you have is a hammer...."  That said, when moving across tools you do break the chain between raw data and final tables.  Be very cautious about that as it could lead to a replicatability problem.  
+> It is best to ignore people who claim "you should _never_ use" another tool like Excel.  These people often prefer a single tool (e.g., R, Python, etc.) to do all jobs and don't often work on teams with a diverse skillset.  As the saying goes, "When all you have is a hammer...."  That said, when moving across tools you do break the chain between raw data and final tables.  Be very cautious about that as it could lead to a replicatability problem.  
 > 
-> Use the right tool for the right job but be mindful of the costs and benefits to time, replicatability, checking efficiency, risk of data corruption, learning new skills, etc.
+> Use the right tool for the right job and be mindful of the costs and benefits to time, replicatability, programming efficiency, checking efficiency, risk of data corruption, learning new skills, etc.
 
 ## Important Functions (Optional)
 * head() - Returns the first or last parts of a vector, matrix, table, data frame or function.  The opposite of tail().
