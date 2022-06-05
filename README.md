@@ -27,7 +27,7 @@ Cheat sheets for [readr](https://raw.githubusercontent.com/rstudio/cheatsheets/m
 * [Introduction to readR (5:04)](https://www.youtube.com/watch?v=URJNKVBMCAY) - This video provides a very quick and high-level overview of the **readR** package.  It covers Hierarchical data types that are commonly found in social science research.  More detail on the readR package or other data types can be found in the optional videos below.
 
   * _(Optional)_ [The readr Package for Importing Delimited Data (25:02)](https://www.youtube.com/watch?v=qxbfVEDfi0o)
-  * _(Optional)_ [Importing Excel Data, SAS Data, and More (14:44)](https://www.youtube.com/watch?v=qxbfVEDfi0o)
+  * _(Optional)_ [Importing Excel Data, SAS Data, and More (14:45)](https://youtu.be/jKlkhvx2JWU)
   * _(Optional)_ [Importing Data Into R (45:00)](https://www.rstudio.com/resources/webinars/importing-data-into-r/)
 
 > **BEST PRACTICE NOTE:**  
