@@ -182,13 +182,6 @@ df_aj <- anti_join(df1, df2, by = "ID")
 * [Summary Statistics with Two Variables](https://www.youtube.com/watch?v=L5WV8KiD8-A&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=10)
 * [Simple Plots and Graphs](https://www.youtube.com/watch?v=pLh2gdHDUZc&list=PLcTBLulJV_AIuXCxr__V8XAzWZosMQIfW&index=11)
 
-### Sample Code
-
-
-```r
-# Forthcoming
-```
-
 ## Communicate Insights
 
 Figures generated in R are typically better than most other statistical packages (Stata and SAS, for example).  The main package for generating figures is **ggplot2** [(Cheat Sheet)](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf).  The options available for ggplot2 are so vast that multiple books have been written on the subject (See online versions written by [Hadley Wickham](https://ggplot2-book.org/index.html) or [Winston Chang](https://r-graphics.org/)).
@@ -229,7 +222,27 @@ This means a figure is comprised of multiple layers and that each layer is compr
 ### Sample Code
 
 ```r
-# Forthcoming
+library(ggplot2)
+
+# Create a data frame
+df <- data.frame(x = c(1, 2, 3, 4, 5),
+                 y = c(2, 3, 5, 4, 6))
+
+# Create the scatter plot
+ggplot(data = df, aes(x = x, y = y)) + 
+  geom_point(size = 3, color = "black") +
+  labs(title = "Scatter Plot of X and Y", 
+       x = "X-axis Label", 
+       y = "Y-axis Label") +
+  theme_classic(base_size = 12, base_family = "serif") +
+  theme(plot.title = element_text(size = 16, face = "bold", hjust = 0.5, margin = margin(b = 10)),
+        axis.text = element_text(size = 14, color = "black"),
+        axis.title = element_text(size = 16, color = "black"),
+        panel.background = element_rect(fill = "white", color = NA),
+        panel.grid.major = element_line(color = "gray80"),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(color = "black"),
+        legend.position = "none")
 ```
 Sometimes it is easier to export raw data into excel for formatting there.  This may be true if it is a one-off analysis and the time to format the output in R would be greater than the time to format in Excel.  It may also be easier if you are working with people that do not know R.  Fortunately, the **openxlsx** package exists for this purpose.  It is straightforward to use for the purposes of exporting raw data.  That said, the package is capable of much more than just exporting data.  As your knowledge of R expands you may want to learn some of these other features.
 
