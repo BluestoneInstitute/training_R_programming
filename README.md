@@ -113,6 +113,35 @@ Cheatsheets for [tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/ma
 ```r
 library(dplyr)
 
+#EXAMPLES OF USING DPLYR TO MUTATE, FILTER, SELECT, ARRANGE, OR RENAME DATA
+# create an example data frame
+df <- data.frame(x = c(1, 2, 3, 4, 5),
+                 y = c("a", "b", "c", "d", "e"),
+                 z = c(10, 20, 30, 40, 50))
+
+# create a new variable using mutate()
+df <- df %>% 
+  mutate(new_var = x * z)
+
+# filter the data frame using filter()
+df_filtered <- df %>% 
+  filter(new_var > 100)
+
+# select specific columns using select()
+df_selected <- df_filtered %>% 
+  select(x, y, new_var)
+
+# arrange the data frame using arrange()
+df_arranged <- df_selected %>% 
+  arrange(desc(new_var))
+
+# rename a column using rename()
+df_renamed <- df_arranged %>% 
+  rename(NewVar = new_var)
+
+# view the final data frame
+df_renamed
+
 #EXAMPLES OF JOINING DATA WITH DPLYR
 # create example data frames
 df1 <- data.frame(ID = c(1, 2, 3, 4),
