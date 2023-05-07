@@ -110,9 +110,33 @@ Cheatsheets for [tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/ma
   * [Grouping in dplyr (9:48)](https://www.youtube.com/watch?v=zEhlgY2l3gE) - Covers the **group_by()** function in dplyr.
 
 ### Sample Code
-
 ```r
-# Forthcoming
+library(dplyr)
+
+#EXAMPLES OF JOINING DATA WITH DPLYR
+# create example data frames
+df1 <- data.frame(ID = c(1, 2, 3, 4),
+                  var1 = c(10, 20, 30, 40))
+
+df2 <- data.frame(ID = c(2, 3, 4, 5),
+                  var2 = c(50, 60, 70, 80))
+
+# example of inner join
+df_ij <- inner_join(df1, df2, by = "ID")
+
+# example of inner join
+df_fj <- full_join(df1, df2, by = "ID")
+
+# example of inner join
+df_lj <- left_join(df1, df2, by = "ID")
+
+# example of inner join
+df_rj <- right_join(df1, df2, by = "ID")
+
+# example of inner join
+df_aj <- anti_join(df1, df2, by = "ID")
+
+
 ```
 
 ## Explore Data
